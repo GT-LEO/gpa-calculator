@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+	body, .parent{
+		overflow-x: hidden;
+		background: /*#bcbcbc#fbfbfb*/#18306e;
+	}	
+html, *::before, *::after{
+	box-sizing: border-box;
+}
+.heading{
+	color: #fdfcf7;
+	word-spacing: 0.5rem;
+	display: inline-block;
+	font-size: 1.3rem;
+	font-weight: 600;
+	width: 65vw;
+}
+
+ul{
+	background: #fc2350;
+	color: white;
+	text-align: center;
+	padding: 0.5rem 0.5rem 0.5rem 0rem;
+	line-height: 3rem;
+	border-radius: 1rem;
+	display: none;
+}
+main{
+	margin-top: 14vh;
+	background: lavender;
+	padding: 3vw;
+	border-radius: 2.5rem;
+	width: 80vw;
+	margin-left: 6vw;
+	box-shadow: 2px 2px 2px 2px rgb(0, 0, 0.1);
+}
+header{
+	padding-top: 1vh;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	display: flex;
+	gap: 25vw;
+	position: fixed;
+}
+li{
+	white-space: nowrap;
+	list-style: none;
+	opacity: 60%;
+color: lavender;
+}
+li:hover, .contact:hover, .blog:hover, .page3:hover{
+opacity: 100%;
+cursor: pointer;
+}
+.blog a, .contact a{
+	color: #fff;
+	text-decoration: none;
+	opacity: 80%;
+color: lavender;
+}
+.page3{
+color: #fff;
+	text-decoration: none;
+	opacity: 60%;
+color: lavender;	
+}
+.hamburger{
+	background: #fdfcf7;
+	font-size: 1.3rem;
+	font-weight: 600;
+	display: inline-block;
+	position: fixed;
+	padding: 0rem 0.3rem 0rem 0.3rem;
+}
+.hamburger:hover{
+	cursor: pointer;
+}
+nav{
+width: 10vw;
+}
+ul{
+	margin-top: 5vh;
+	margin-left: -30vw;
+}
+.description{
+	color: #454b6d;
+	font-family: monospace;
+	font-weight: 600;
+}
+.enter, .enter2{
+	font-weight: 800;
+	font-size: 1.2rem;
+	margin-top: 6vh;
+}
+.enter2{
+	display: none;
+}
+.gt{
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: #fc2350;
+	font-family: initial;
+}
+.gpa-form div label, .cgpa-form div label{
+	display:block;
+width: 60vw;
+}
+.gpa-form div input, .cgpa-form div input{
+width: 60vw;
+padding: 0.5rem;
+border-radius: 1rem;
+border: 1px solid #bbb;
+}
+.gpa-form div, .cgpa-form div{
+	margin-bottom: 4vh;
+margin-left: 10vw;
+
+}
+.calc:hover, #calc:hover{
+cursor: pointer;
+color: #fff;
+background: #18306e;
+}
+.calc, #calc{
+	margin-left:30vw;
+width: 10rem;
+border: none;
+padding: 0.6rem;
+background: #fc2350;
+border-radius: 1rem;
+color: #fdfcf7;
+}
+.cgpa-form{
+	display: none;
+}
+.no{
+	text-align: center;
+}
+.no span{
+	padding: 1vw;
+}
+.select{
+	display: block;
+	color: #18306e;
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+#message{
+	text-align: center;
+}
+.message{
+	text-align: center;
+}
+
+@media(min-width:900px){
+	ul{
+		padding-top: 2vh;
+		display: flex;
+		gap: 2vw;
+		flex-flow: nowrap;
+		margin-top: -3vh;
+		background: initial;
+	margin-left: -35vw;
+	}
+	.page1:hover, .page2:hover, .page3:hover, .contact a:hover, .blog a:hover{
+
+	}
+	.page1, .page2, .page3, .contact a, .blog a{
+		color: teal;
+		display: inline-block;
+/*		background: red;*/
+	}
+	.hamburger{
+		display: none;
+	}
+}
+
+
+	</style>
+</head>
+<body>
+<div class="parent">
+	
+	<header>
+		<div class="heading">
+			UNIVERSITY GPA AND CGPA CALCULATOR
+		</div>
+		<nav>
+			<div class="hamburger">&#x2630;</div>
+			<ul>
+				<li class="page1">GPA</li>
+				<li class="page2">CGPA</li>
+				<a href="#about" class="page3">About developer</a>
+				<li class="contact">
+					<a href="">Contact</a>
+				</li>
+				<li class="blog">
+					<a href="">Blog</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<p class="description">
+		This site, designed and built by ONAH GERALD<span><a href="" class="gt">(GT LEO)</a></span> calculates GPA and CGPA of university students.	
+		</p>
+<p class="enter">Enter Your Semester Result Details(Grade A or B or C or D or E or F for each course respectively):</p>
+
+<p class="enter2">Enter your first and second semester GPAs respectively:</p>
+		<section>
+			<form class="gpa-form">
+<div class="grade1"><label class="lab1">Course One</label><input type="text" class="input1 input" placeholder="enter grade" required> </div>
+<div class="grade2"><label class="lab2">Course two</label><input type="text" class="input2 input" placeholder="enter grade"> </div>
+<div class="grade3"><label class="lab3">Course three</label><input type="text" class="input3 input" placeholder="enter grade"> </div>
+<div class="grade4"><label class="lab4">Course four</label><input type="text" class="input4 input" placeholder="enter grade"> </div>
+<div class="grade5"><label class="lab5">Course five</label><input type="text" class="input5 input" placeholder="enter grade"> </div>
+<div class="grade6"><label class="lab6">Course six</label><input type="text" class="input6 input" placeholder="enter grade"> </div>
+<div class="grade7"><label class="lab7">Course seven</label><input type="text" class="input7 input" placeholder="enter grade"> </div>
+<div class="grade8"><label class="lab8">Course eight</label><input type="text" class="input8 input" placeholder="enter grade"> </div>
+<div class="grade9"><label class="lab9">Course nine</label><input type="text" class="input9 input" placeholder="enter grade"> </div>
+<div class="grade10"><label class="lab10">Course ten</label><input type="text" class="input10 input" placeholder="enter grade"> </div>
+<div class="grade11"><label class="lab11">Course eleven</label><input type="text" class="input11 input" placeholder="enter grade"> </div>
+
+<p class="no">
+	<span class="select">Select Number Of Courses Offered:</span>
+	
+	<span>5 <input type="checkbox" class="five"> </span>
+	<span>6 <input type="checkbox" class="six"> </span>
+	<span>7 <input type="checkbox" class="seven"> </span>
+	<span>8 <input type="checkbox" class="eight"> </span>
+	<span>9 <input type="checkbox" class="nine"> </span>
+	<span>10 <input type="checkbox" class="ten"> </span>
+	<span>11 <input type="checkbox" class="eleven"> </span>
+</p>
+ <h2 class="message"></h2> <button class="calc">Calculate</button>	
+			</form>
+		</section>
+
+		<aside class="aside">
+			<form class="cgpa-form">
+<div id="grade1"><label id="lab1">First semester GPA</label><input type="text" id="input1" placeholder="enter GPA"> </div>
+<div id="grade2"><label id="lab2">Second semester GPA</label><input type="text" id="input2" placeholder="enter GPA"> </div>
+
+ <h2 id="message"></h2> <button id="calc">Calculate</button>	
+
+			</form>
+		</aside>
+	</main>
+
+	<footer>
+		<p class="about">ABOUT THE DEVELOPER</p>
+		<p id="about">
+			<figure>
+				<img src="">
+				<figcaption>
+					ONAH GERALD SOROMTOCHUKWU LEO(GT LEO)
+				</figcaption>
+			</figure>
+			Onah Gerald hails from Eha-Alumona town in the local government area of Nsukka Enugu State. He is a product of <a href="" class="codeblaze"> CODEBLAZE ACADEMY UNN</a>.
+			He is currently in 100 level computer science department UNN. He is the project manager of the NACOS 027 Mock CBT exam website developers. This website is one of his numerous free projects that is helpful to students and aspirants of different schools 
+		</p>
+		<div class="follow">You can follow us or contact us on:
+<a href="" class="facebook">FACEBOOK</a>
+<a href="https://wa.me/+2348147383504" class="whatsapp">WHATSAPP</a>
+<a href="mailto:gtoleo21@gmail.com">EMAIL</a>
+		</div>
+	</footer>
+
+</div>
+<script>
+
+	let count = 0;
+	document.querySelector(".hamburger").addEventListener("click", handleClick);
+	function handleClick(){
+		count += 1;
+	if(count % 2 !== 0){
+$(function(){
+$("ul").slideDown(300)
+	})
+document.querySelector(".hamburger").style.background = "lavender"
+document.querySelector(".hamburger").style.padding = "0rem 0.3rem 0rem 0.3rem"
+                        }
+  else{
+     	$(function(){
+$("ul").slideUp(300)
+//document.querySelector(".hamburger").style.background = "initial"
+                   })
+       }
+	      }
+	      let section = document.querySelector("section");
+	      let side = document.querySelector(".aside");
+	      let formTwo = document.querySelector(".cgpa-form");
+	      let enterOne = document.querySelector(".enter");
+	      let enterTwo = document.querySelector(".enter2");
+
+	      let pageOne = document.querySelector(".page1");
+	      let pageTwo = document.querySelector(".page2");
+	      let pageThree = document.querySelector(".page3");
+	pageOne.addEventListener("click", handleClick1)
+	pageTwo.addEventListener("click", handleClick2)
+
+	function handleClick2(){
+side.style.display = "block";
+formTwo.style.display = "block";
+section.style.display = "none";
+$(function(){
+$(".enter").hide(300);
+$(".enter2").slideDown(300)
+
+})
+	}
+	function handleClick1(){
+side.style.display = "none";
+formTwo.style.display = "none";
+section.style.display = "block";
+$(function(){
+$(".enter2").hide(300)
+$(".enter").slideDown(300)
+
+})
+	}
+
+	     
+          let inputOne = document.querySelector("#input1").value;
+	      let inputTwo = document.querySelector("#input2").value;
+	      let button1 = document.querySelector(".calc")
+function getValues(input){
+	switch(input.toUpperCase()){
+	case "A": return 5;
+	case "B": return 4;
+	case "C": return 3;
+	case "D": return 2;
+	case "E": return 1;
+	case "F": return 0;
+	default: return 0;
+	}
+}
+
+	      button1.addEventListener("click", handleButton1)
+	      function handleButton1(){
+	      	event.preventDefault();
+	      	 let msg = document.querySelector(".message");
+
+	      	 let check5 = document.querySelector(".five").checked;
+	      	 let check6 = document.querySelector(".six").checked;
+	      	 let check7 = document.querySelector(".seven").checked;
+	      	 let check8 = document.querySelector(".eight").checked;
+	      	 let check9 = document.querySelector(".nine").checked;
+	      	 let check10 = document.querySelector(".ten").checked;
+	      	 let check11 = document.querySelector(".eleven").checked;
+
+	      	 let input1 = document.querySelector(".input1").value;
+	      let input2 = document.querySelector(".input2").value;
+	      let input3 = document.querySelector(".input3").value;
+	      let input4 = document.querySelector(".input4").value;
+	      let input5 = document.querySelector(".input5").value;
+	      let input6 = document.querySelector(".input6").value;
+	      let input7 = document.querySelector(".input7").value;
+	      let input8 = document.querySelector(".input8").value;
+	      let input9 = document.querySelector(".input9").value;
+	      let input10 = document.querySelector(".input10").value;
+	      let input11 = document.querySelector(".input11").value;
+   const inputs = [input1, input2, input3, input4, input5, input6, input7, input8, input9, input10, input11];
+let total = inputs.reduce((sum, value) => sum + getValues(value), 0);
+if(check5){
+ aggregate = total/5; 
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+}
+if(check6){ 
+	aggregate = total/6;
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+}
+if(check7){ 
+	aggregate = total/7;
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+	 }
+if(check8){ 
+	aggregate = total/8;
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+	 }
+if(check9){
+ aggregate = total/9; 
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+}
+if(check10){
+ aggregate = total/10; 
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+}
+if(check11){
+ aggregate = total/11; 
+ let fixed = aggregate.toFixed(2);
+msg.innerText = "Your GPA is " + fixed;
+msg.style.color = "#18306e";
+  }
+ 	
+	}
+
+	      let button2 = document.querySelector("#calc")
+	      button2.addEventListener("click", handleButton2);
+	      function handleButton2(){
+	      	event.preventDefault();
+      let returnMessage = document.querySelector("#message");
+      let result1 = document.querySelector("#input1").value
+      let result2 = document.querySelector("#input2").value
+      let cgpaInputPattern = /^[0-9.]{3}$/;
+      let cummulative = 0;
+if(cgpaInputPattern.test(result1) === false){
+		returnMessage.innerText = "Enter valid GPA values!";
+		returnMessage.style.color = "red";
+}
+if(cgpaInputPattern.test(result2) === false){
+		returnMessage.innerText = "Enter valid GPA values!";
+		returnMessage.style.color = "red";
+}
+	else{
+		let aggreg = parseFloat(result1) + parseFloat(result2);
+		let aggregate = eval(aggreg/2);
+		cummulative = Number(aggregate).toFixed(2);
+		console.log(cummulative)
+		returnMessage.innerText = "Your CGPA Is " + cummulative;
+		returnMessage.style.color = "#18306e";
+
+	}
+	      }
+
+window.addEventListener("scroll", handleScroll);
+function handleScroll(){
+	if(window.scrollY > 120){
+		document.querySelector(".heading").style.color = "#fc2350"
+	}
+	else{
+		document.querySelector(".heading").style.color = "#fdfcf7"	
+	}
+}
+	
+</script>
+</body>
+</html>
