@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>
+		<img src="">
+	</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<style>
 	body, .parent{
@@ -45,7 +47,7 @@ header{
 	padding-left: 2vw;
 	padding-right: 2vw;
 	display: flex;
-	gap: 25vw;
+	gap: 20vw;
 	position: fixed;
 }
 li{
@@ -263,10 +265,10 @@ color: #fdfcf7;
 					ONAH GERALD SOROMTOCHUKWU LEO(GT LEO)
 				</figcaption>
 			</figure>
-			Onah Gerald hails from Eha-Alumona town in the local government area of Nsukka Enugu State. He is a product of <a href="" class="codeblaze"> CODEBLAZE ACADEMY UNN</a>.
-			He is currently in 100 level computer science department UNN. He is the project manager of the NACOS 027 Mock CBT exam website developers. This website is one of his numerous free projects that is helpful to students and aspirants of different schools 
+			Onah Gerald hails from Nsukka in Enugu State  Nigeria. He is a product of <a href="" class="codeblaze"> CODEBLAZE ACADEMY UNN</a>.
+			He is currently in 100 level computer science department University Of Nigeria Nsukka. He is the project manager of the NACOS 027 Mock CBT exam website/webApp developers. This website is one of his free projects that is helpful to students and aspirants of different higher institutions in Nigeria. 
 		</p>
-		<div class="follow">You can follow us or contact us on:
+		<div class="follow">You can follow or contact Onah Gerald on:
 <a href="" class="facebook">FACEBOOK</a>
 <a href="https://wa.me/+2348147383504" class="whatsapp">WHATSAPP</a>
 <a href="mailto:gtoleo21@gmail.com">EMAIL</a>
@@ -410,7 +412,11 @@ if(check11){
 msg.innerText = "Your GPA is " + fixed;
 msg.style.color = "#18306e";
   }
- 	
+ 	if(!check5 && !check6 && !check7 && !check8 && !check9 && !check10 && !check11){
+msg.innerText = "Select Number OF Courses Offered!";
+msg.style.color = "red";	
+
+	}
 	}
 
 	      let button2 = document.querySelector("#calc")
