@@ -21,17 +21,24 @@ html, *::before, *::after{
 	display: inline-block;
 	font-size: 1.3rem;
 	font-weight: 600;
-	width: 65vw;
+	width: 60vw;
+	padding-left: 2vw;
 }
 
-ul{
+.ul{
 	background: #127265;
 	color: white;
 	text-align: center;
-	padding: 0.5rem 0.5rem 0.5rem 0rem;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 	line-height: 3rem;
-	border-radius: 1rem;
-	display: none;
+ translate: 100vw;
+	position: relative;
+	z-index: 2;
+width: 100vw;
+	margin-left: 0;
+	margin-top: 8vh;
+	opacity: 40%;
+	transition:opacity 0.5s linear, translate 0.5s linear;
 }
 main{
 	margin-top: 14vh;
@@ -44,21 +51,20 @@ main{
 }
 header{
 	padding-top: 1vh;
-	padding-left: 2vw;
-	padding-right: 2vw;
-	display: flex;
-	gap: 20vw;
-	
+	padding-right: 3vw;
+	display: flex;	
 }
-li{
+.page3, li{
 	white-space: nowrap;
 	list-style: none;
 	opacity: 60%;
 color: lavender;
+transition: opacity 0.5s linear, font-size 0.5s linear;
 }
 li:hover, .contact:hover, .blog:hover, .page3:hover{
 opacity: 100%;
 cursor: pointer;
+font-size: 1.3rem;
 }
 .blog a, .contact a{
 	color: #fff;
@@ -73,21 +79,35 @@ color: #fff;
 color: lavender;	
 }
 .hamburger{
-	background: #fdfcf7;
-	font-size: 1.3rem;
+	height: 1.3rem;
+	width: 1.3rem;
 	font-weight: 600;
-	display: inline-block;
-	padding: 0rem 0.3rem 0rem 0.3rem;
+	display: block;
+	margin-left: 88vw;
 }
+
 .hamburger:hover{
 	cursor: pointer;
 }
-nav{
-width: 10vw;
+.open{
+	font-size: 1.3rem;
+	padding:0.3rem;
 }
-ul{
-	margin-top: 5vh;
-	margin-left: -30vw;
+.close{
+	padding:0.3rem;
+	font-size: 1.3rem;
+	color: black;
+	background: none;
+transition:background 0.5s linear, color 0.5s linear, display 0.5s linear;
+display: none;
+}
+.close:hover{
+color: #fff;
+background:red;
+}
+nav{
+	position: absolute;
+	z-index: 1;
 }
 .description{
 	color: #12332fe3;
@@ -107,6 +127,9 @@ ul{
 	font-size: 1.1rem;
 	color: #0d5a4f;
 	font-family: initial;
+}
+.gt:hover{
+cursor: pointer;
 }
 .gpa-form div label, .cgpa-form div label{
 	display:block;
@@ -129,8 +152,11 @@ color: #fff;
 background: #127265;
 }
 .calc, #calc{
-	margin-left:30vw;
-width: 10rem;
+	transition: background 0.5s linear;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-left:11vw;
+width: 58vw;
 border: none;
 padding: 0.6rem;
 background: #063031;
@@ -158,28 +184,102 @@ color: #fdfcf7;
 .message{
 	text-align: center;
 }
+.picture{
+	height: 60vw;
+	width:60vw;
+	border-radius: 30vw;
+}
+figure{
+	text-align: center;
+
+}
+.about{
+	text-align: center;
+	background: #063031;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding: 0.5rem;
+
+}
+footer{
+	color: #063031;
+	margin: 10vh 5vw 5vh 5vw;
+	box-shadow: 2px 2px 2px 2px rgb(0, 0, 0.1);
+width: 88vw;
+}
+figcaption{
+	/*color: #063031;*/
+color:black;
+font-size: 0.9rem;
+font-weight: 600;
+
+}
+.hails{
+	display: inline-block;
+	margin-top: 5vh;
+	padding: 0.5rem;
+	color: lavender;
+	background: #127265;
+border-radius: 0.8rem 0.8rem 0rem 0rem;
+}
+.follow{
+	background: #127265;
+	margin-top: 0;
+color:black;
+padding: 0.7rem;
+border-radius: 0.8rem 0.8rem 0rem 0rem;
+}
+
+
+
+
 
 @media(min-width:900px){
-	ul{
-		padding-top: 2vh;
+	#ul{
+	margin-top: 0;
+		translate: 50%;
+		padding: 2vh;
 		display: flex;
 		gap: 2vw;
-		flex-flow: nowrap;
+		white-space: nowrap;
 		margin-top: -3vh;
-		background: initial;
-	margin-left: -35vw;
+		background: none;
+/*	margin-left: -35vw;*/
+	opacity: 100%;
 	}
-	.page1:hover, .page2:hover, .page3:hover, .contact a:hover, .blog a:hover{
-
+	header{
+		display: flex;
+		gap: 20vw;
 	}
 	.page1, .page2, .page3, .contact a, .blog a{
-		color: teal;
+		color: white;
 		display: inline-block;
-/*		background: red;*/
+		background: black;
+	opacity: 100%;
+		padding:0rem 0.5rem 0rem 0.5rem;
+transition: background 0.5s linear;
+	border-radius: 0.3rem;
+	}
+	.heading{
+		width: initial;
 	}
 	.hamburger{
+		margin:0;
 		display: none;
 	}
+.page3, li{
+	border-radius: 0.3rem;
+transition: none;
+	opacity: 100%;
+	font-size: 1.1rem;
+transition: background 0.5s linear;
+}
+.page1:hover, .page2:hover, .page3:hover, .contact a:hover, .blog a:hover, #about:hover{
+background: #063031;
+	font-size: 1.1rem;
+}
+
 }
 
 
@@ -193,8 +293,11 @@ color: #fdfcf7;
 			UNIVERSITY GPA AND CGPA CALCULATOR
 		</div>
 		<nav>
-			<div class="hamburger">&#x2630;</div>
-			<ul>
+			<div class="hamburger">
+		<span class="open">&#x2630;</span>
+		<span class="close">&#x2715;</span>
+		</div>
+			<ul id="ul" class="ul">
 				<li class="page1">GPA</li>
 				<li class="page2">CGPA</li>
 				<a href="#about" class="page3">About developer</a>
@@ -212,33 +315,117 @@ color: #fdfcf7;
 		<p class="description">
 		This site, designed and built by ONAH GERALD<span><a href="" class="gt">(GT LEO)</a></span> calculates GPA and CGPA of university students.	
 		</p>
-<p class="enter">Enter Your Semester Result Details(Grade A or B or C or D or E or F for each course respectively):</p>
+<p class="enter">Enter Your Semester Result Details(Grade A or B or C or D or E or F for each course and their unit loads respectively):</p>
 
 <p class="enter2">Enter your first and second semester GPAs respectively:</p>
 		<section>
 			<form class="gpa-form">
-<div class="grade1"><label class="lab1">Course One</label><input type="text" class="input1 input" placeholder="enter grade" required> </div>
-<div class="grade2"><label class="lab2">Course two</label><input type="text" class="input2 input" placeholder="enter grade"> </div>
-<div class="grade3"><label class="lab3">Course three</label><input type="text" class="input3 input" placeholder="enter grade"> </div>
-<div class="grade4"><label class="lab4">Course four</label><input type="text" class="input4 input" placeholder="enter grade"> </div>
-<div class="grade5"><label class="lab5">Course five</label><input type="text" class="input5 input" placeholder="enter grade"> </div>
-<div class="grade6"><label class="lab6">Course six</label><input type="text" class="input6 input" placeholder="enter grade"> </div>
-<div class="grade7"><label class="lab7">Course seven</label><input type="text" class="input7 input" placeholder="enter grade"> </div>
-<div class="grade8"><label class="lab8">Course eight</label><input type="text" class="input8 input" placeholder="enter grade"> </div>
-<div class="grade9"><label class="lab9">Course nine</label><input type="text" class="input9 input" placeholder="enter grade"> </div>
-<div class="grade10"><label class="lab10">Course ten</label><input type="text" class="input10 input" placeholder="enter grade"> </div>
-<div class="grade11"><label class="lab11">Course eleven</label><input type="text" class="input11 input" placeholder="enter grade"> </div>
+<div class="grade1">
+<span class="span1">
+	<label class="lab1">Course One</label><input type="text" class="input1 input" placeholder="enter grade" required> 
+</span>
+<span class="spa1"><label id="unit1">Unit load</label><input class="unit1" placeholder="enter course one unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade2">
+<span class="span2">
+	<label class="lab2">Course two</label><input type="text" class="input2 input" placeholder="enter grade"> 
+</span>
+<span class="spa2"><label id="unit2">Unit load</label><input class="unit2" placeholder="enter course two unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade3">
+<span class="span3">
+	<label class="lab3">Course three</label><input type="text" class="input3 input" placeholder="enter grade"> 
+</span>
+<span class="spa3"><label id="unit3">Unit load</label><input class="unit3" placeholder="enter course three unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade4">
+<span class="span4">
+	<label class="lab4">Course four</label><input type="text" class="input4 input" placeholder="enter grade"> 
+</span>
+<span class="spa4"><label id="unit4">Unit load</label><input class="unit4" placeholder="enter course four unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade5">
+<span class="span5">
+	<label class="lab5">Course five</label><input type="text" class="input5 input" placeholder="enter grade"> 
+</span>
+<span class="spa5"><label id="unit5">Unit load</label><input class="unit5" placeholder="enter course five unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade6">
+<span class="span6">
+	<label class="lab6">Course six</label><input type="text" class="input6 input" placeholder="enter grade">
+</span>
+<span class="spa6"><label id="unit6">Unit load</label><input class="unit6" placeholder="enter course six unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+	 </div>
+
+<div class="grade7">
+<span class="span7">
+	<label class="lab7">Course seven</label><input type="text" class="input7 input" placeholder="enter grade"> 
+</span>
+<span class="spa7"><label id="unit7">Unit load</label><input class="unit7" placeholder="enter course seven unit load, example 2, 3 or 4" type="number"></span>
+</div>
+
+<div class="grade8">
+<span class="span8">
+	<label class="lab8">Course eight</label><input type="text" class="input8 input" placeholder="enter grade"> 
+</span>
+<span class="spa8"><label id="unit11">Unit load</label><input class="unit8" placeholder="enter course eight unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade9">
+<span class="span9">
+	<label class="lab9">Course nine</label><input type="text" class="input9 input" placeholder="enter grade"> 
+</span>
+<span class="spa9"><label id="unit9">Unit load</label><input class="unit9" placeholder="enter course nine unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade10">
+<span class="span10">
+	<label class="lab10">Course ten</label><input type="text" class="input10 input" placeholder="enter grade"> 
+</span>
+<span class="spa10"><label id="unit10">Unit load</label><input class="unit10" placeholder="enter course ten unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade11">
+<span class="span11">
+	<label class="lab11">Course eleven</label><input type="text" class="input11 input" placeholder="enter grade"> 
+</span>
+<span class="spa11"><label id="unit11">Unit load</label><input class="unit11" placeholder="enter course eleven unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+<div class="grade12">
+<span class="span12">
+	<label class="lab12">Course twelve</label><input type="text" class="input12 input" placeholder="enter grade"> 
+</span>
+<span class="spa12"><label id="unit12">Unit load</label><input class="unit12" placeholder="enter course twelve unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
+
+
+<div class="grade13">
+<span class="span13">
+	<label class="lab13">Course thirteen</label><input type="text" class="input13 input" placeholder="enter grade"> 
+</span>
+<span class="spa13"><label id="unit13">Unit load</label><input class="unit13" placeholder="enter course thirteen unit load, example 2, 3 or 4" type="number"  min="1" max="4"></span>
+</div>
 
 <p class="no">
-	<span class="select">Select Number Of Courses Offered:</span>
+	<span class="select">Select Total Unit Load Of Courses Offered:</span>
 	
-	<span>5 <input type="checkbox" class="five"> </span>
-	<span>6 <input type="checkbox" class="six"> </span>
-	<span>7 <input type="checkbox" class="seven"> </span>
-	<span>8 <input type="checkbox" class="eight"> </span>
-	<span>9 <input type="checkbox" class="nine"> </span>
-	<span>10 <input type="checkbox" class="ten"> </span>
-	<span>11 <input type="checkbox" class="eleven"> </span>
+	<span>15 <input type="checkbox" class="five"> </span>
+	<span>16 <input type="checkbox" class="six"> </span>
+	<span>17 <input type="checkbox" class="seven"> </span>
+	<span>18 <input type="checkbox" class="eight"> </span>
+	<span>19 <input type="checkbox" class="nine"> </span>
+	<span>20 <input type="checkbox" class="ten"> </span>
+	<span>21 <input type="checkbox" class="eleven"> </span>
+	<span>22 <input type="checkbox" class="twelve"> </span>
+	<span>23 <input type="checkbox" class="thirteen"> </span>
+	<span>24 <input type="checkbox" class="forteen"> </span>
+	<span>25 <input type="checkbox" class="fifteen"> </span>
 </p>
  <h2 class="message"></h2> <button class="calc">Calculate</button>	
 			</form>
@@ -246,8 +433,8 @@ color: #fdfcf7;
 
 		<aside class="aside">
 			<form class="cgpa-form">
-<div id="grade1"><label id="lab1">First semester GPA</label><input type="text" id="input1" placeholder="enter GPA"> </div>
-<div id="grade2"><label id="lab2">Second semester GPA</label><input type="text" id="input2" placeholder="enter GPA"> </div>
+<div id="grade1"><label id="lab1">First semester GPA</label><input type="text" id="input1" placeholder="enter GPA in two decimal places, example 4.20, 4.60, etc "> </div>
+<div id="grade2"><label id="lab2">Second semester GPA</label><input type="text" id="input2" placeholder="enter GPA in two decimal places, example 4.20, 4.60, etc "> </div>
 
  <h2 id="message"></h2> <button id="calc">Calculate</button>	
 
@@ -259,13 +446,15 @@ color: #fdfcf7;
 		<p class="about">ABOUT THE DEVELOPER</p>
 		<p id="about">
 			<figure>
-				<img src="">
+				<img src="./images/myself2.jpg" class="picture">
 				<figcaption>
-					ONAH GERALD SOROMTOCHUKWU LEO(GT LEO)
+					ONAH GERALD SOROMTOCHUKWU LEO.
 				</figcaption>
 			</figure>
+			<span class="hails">
 			Onah Gerald hails from Nsukka in Enugu State  Nigeria. He is a product of <a href="" class="codeblaze"> CODEBLAZE ACADEMY UNN</a>.
-			He is currently in 100 level computer science department University Of Nigeria Nsukka. He is the project manager of the NACOS 027 Mock CBT exam website/webApp developers. This website is one of his free projects that is helpful to students and aspirants of different higher institutions in Nigeria. 
+			He is currently in 100 level computer science department University Of Nigeria Nsukka. He is the project manager of the NACOS 027 Mock CBT exam website/webApp developers. This website is one of his free projects that is helpful to students and aspirants of different higher institutions in Nigeria.
+		</span> 
 		</p>
 		<div class="follow">You can follow or contact Onah Gerald on:
 <a href="" class="facebook">FACEBOOK</a>
@@ -276,39 +465,35 @@ color: #fdfcf7;
 
 </div>
 <script>
+	      let open = document.querySelector(".open");
+	      let close = document.querySelector(".close");
+	      let ul = document.querySelector(".ul");
 
 	let count = 0;
 	document.querySelector(".hamburger").addEventListener("click", handleClick);
 	function handleClick(){
 		count += 1;
 	if(count % 2 !== 0){
-$(function(){
-$("ul").slideDown(300)
-	})
-	document.querySelector("main").style.marginTop = "14vh";
-	document.querySelector("header").style.position = "fixed";
-document.querySelector(".hamburger").style.position = "fixed";
-document.querySelector(".hamburger").style.background = "lavender"
-document.querySelector(".hamburger").style.padding = "0rem 0.3rem 0rem 0.3rem"
-                        }
-  else{
-     	$(function(){
-$("ul").slideUp(300)
+ul.style.translate = "0vw";
+ul.style.opacity = "100%";
+close.style.display = "inline-block";
+open.style.display = "none";
 
-//document.querySelector(".hamburger").style.background = "initial"
-                   })
-				   document.querySelector("header").style.position = "initial";
-document.querySelector(".hamburger").style.position = "initial";
-document.querySelector("main").style.marginTop = "14vh";
-
-       }
+	}
+                   
+  else{ 
+ul.style.translate = "100vw";
+close.style.display = "none";
+open.style.display = "inline-block";
+ul.style.opacity = "40%";
 	      }
+	    }
 	      let section = document.querySelector("section");
 	      let side = document.querySelector(".aside");
 	      let formTwo = document.querySelector(".cgpa-form");
 	      let enterOne = document.querySelector(".enter");
 	      let enterTwo = document.querySelector(".enter2");
-
+       
 	      let pageOne = document.querySelector(".page1");
 	      let pageTwo = document.querySelector(".page2");
 	      let pageThree = document.querySelector(".page3");
@@ -335,111 +520,217 @@ $(".enter").slideDown(300)
 
 })
 	}
+	      let button1 = document.querySelector(".calc");
 
-	     
-          let inputOne = document.querySelector("#input1").value;
-	      let inputTwo = document.querySelector("#input2").value;
-	      let button1 = document.querySelector(".calc")
-function getValues(input){
-	switch(input.toUpperCase()){
-	case "A": return 5;
-	case "B": return 4;
-	case "C": return 3;
-	case "D": return 2;
-	case "E": return 1;
-	case "F": return 0;
-	default: return 0;
-	}
-}
 	      button1.addEventListener("click", handleButton1)
 	      function handleButton1(){
 	      	event.preventDefault();
-	      	 let msg = document.querySelector(".message");
 
-	      	 let check5 = document.querySelector(".five").checked;
-	      	 let check6 = document.querySelector(".six").checked;
-	      	 let check7 = document.querySelector(".seven").checked;
-	      	 let check8 = document.querySelector(".eight").checked;
-	      	 let check9 = document.querySelector(".nine").checked;
-	      	 let check10 = document.querySelector(".ten").checked;
-	      	 let check11 = document.querySelector(".eleven").checked;
-
-	      	 let input1 = document.querySelector(".input1").value;
-	      let input2 = document.querySelector(".input2").value;
-	      let input3 = document.querySelector(".input3").value;
-	      let input4 = document.querySelector(".input4").value;
-	      let input5 = document.querySelector(".input5").value;
-	      let input6 = document.querySelector(".input6").value;
-	      let input7 = document.querySelector(".input7").value;
-	      let input8 = document.querySelector(".input8").value;
-	      let input9 = document.querySelector(".input9").value;
-	      let input10 = document.querySelector(".input10").value;
-	      let input11 = document.querySelector(".input11").value;
-   const inputs = [input1, input2, input3, input4, input5, input6, input7, input8, input9, input10, input11];
-let total = inputs.reduce((sum, value) => sum + getValues(value), 0);
-if(check5){
- aggregate = total/5; 
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
-}
-if(check6){ 
-	aggregate = total/6;
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
-}
-if(check7){ 
-	aggregate = total/7;
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
-	 }
-if(check8){ 
-	aggregate = total/8;
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
-	 }
-if(check9){
- aggregate = total/9; 
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
-}
-if(check10){
- aggregate = total/10; 
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
-}
-if(check11){
- aggregate = total/11; 
- let fixed = aggregate.toFixed(2);
-msg.innerText = "Your GPA is " + fixed;
-msg.style.color = "#063031";
+	      	function convertGrade(grade) {
+    switch (grade.toUpperCase()) {
+      case 'A': return 5;
+      case 'B': return 4;
+      case 'C': return 3;
+      case 'D': return 2;
+      case 'E': return 1;
+      default : return 0;
+    }
   }
- 	if(!check5 && !check6 && !check7 && !check8 && !check9 && !check10 && !check11){
-msg.innerText = "Select Number OF Courses Offered!";
-msg.style.color = "red";	
 
-	}
-	}
+	   let msg = document.querySelector(".message");
+	      	 let check15 = document.querySelector(".five").checked;
+	      	 let check16 = document.querySelector(".six").checked;
+	      	 let check17 = document.querySelector(".seven").checked;
+	      	 let check18 = document.querySelector(".eight").checked;
+	      	 let check19 = document.querySelector(".nine").checked;
+	      	 let check20 = document.querySelector(".ten").checked;
+	      	 let check21 = document.querySelector(".eleven").checked;
+	      	 let check22 = document.querySelector(".twelve").checked;
+	      	 let check23 = document.querySelector(".thirteen").checked;
+	      	 let check24 = document.querySelector(".forteen").checked;
+	      	 let check25 = document.querySelector(".fifteen").checked;
 
+	      let input1 = convertGrade(document.querySelector(".input1").value);
+	      let input2 = convertGrade(document.querySelector(".input2").value);
+	      let input3 = convertGrade(document.querySelector(".input3").value);
+	      let input4 = convertGrade(document.querySelector(".input4").value);
+	      let input5 = convertGrade(document.querySelector(".input5").value);
+	      let input6 = convertGrade(document.querySelector(".input6").value);
+	      let input7 = convertGrade(document.querySelector(".input7").value);
+	      let input8 = convertGrade(document.querySelector(".input8").value);
+	      let input9 = convertGrade(document.querySelector(".input9").value);
+	      let input10 = convertGrade(document.querySelector(".input10").value);
+	      let input11 = convertGrade(document.querySelector(".input11").value);
+	      let input12 = convertGrade(document.querySelector(".input12").value);
+	      let input13 = convertGrade(document.querySelector(".input13").value);
+
+
+          let inputs1 = document.querySelector(".input1").value;
+	      let inputs2 = document.querySelector(".input2").value;
+	      let inputs3 = document.querySelector(".input3").value;
+	      let inputs4 = document.querySelector(".input4").value;
+	      let inputs5 = document.querySelector(".input5").value;
+	      let inputs6 = document.querySelector(".input6").value;
+	      let inputs7 = document.querySelector(".input7").value;
+	      let inputs8 = document.querySelector(".input8").value;
+	      let inputs9 = document.querySelector(".input9").value;
+	      let inputs10 = document.querySelector(".input10").value;
+	      let inputs11 = document.querySelector(".input11").value;
+	      let inputs12 = document.querySelector(".input12").value;
+	      let inputs13 = document.querySelector(".input13").value;
+
+
+	      let unit1 = Number(document.querySelector(".unit1").value);
+	      let unit2 = Number(document.querySelector(".unit2").value);
+	      let unit3 = Number(document.querySelector(".unit3").value);
+	      let unit4 = Number(document.querySelector(".unit4").value);
+	      let unit5 = Number(document.querySelector(".unit5").value);
+	      let unit6 = Number(document.querySelector(".unit6").value);
+	      let unit7 = Number(document.querySelector(".unit7").value);
+	      let unit8 = Number(document.querySelector(".unit8").value);
+	      let unit9 = Number(document.querySelector(".unit9").value);
+	      let unit10 = Number(document.querySelector(".unit10").value);
+	      let unit11 = Number(document.querySelector(".unit11").value);
+	      let unit12 = Number(document.querySelector(".unit12").value);
+	      let unit13 = Number(document.querySelector(".unit13").value);
+
+	      let put1 = (document.querySelector(".unit1").value);
+	      let put2 = (document.querySelector(".unit2").value);
+	      let put3 = (document.querySelector(".unit3").value);
+	      let put4 = (document.querySelector(".unit4").value);
+	      let put5 = (document.querySelector(".unit5").value);
+	      let put6 = (document.querySelector(".unit6").value);
+	      let put7 = (document.querySelector(".unit7").value);
+	      let put8 = (document.querySelector(".unit8").value);
+	      let put9 = (document.querySelector(".unit9").value);
+	      let put10 = (document.querySelector(".unit10").value);
+	      let put11 = (document.querySelector(".unit11").value);
+	      let put12 = (document.querySelector(".unit12").value);
+	      let put13 = (document.querySelector(".unit13").value);
+
+  const product1 = eval(input1 * unit1);
+  const product2 = Number(input2 * unit2);
+  const product3 = Number(input3 * unit3);
+  const product4 = Number(input4 * unit4);
+  const product5 = Number(input5 * unit5);
+  const product6 = Number(input6 * unit6);
+  const product7 = Number(input7 * unit7);
+  const product8 = Number(input8 * unit8);
+  const product9 = Number(input9 * unit9);
+  const product10 = Number(input10 * unit10);
+  const product11 = Number(input11 * unit11);
+  const product12 = Number(input12 * unit12);
+  const product13 = Number(input13 * unit13);
+
+const totalProducts = Number(product1 + product2 + product3 + product4 + product5 + product6 + product7 + product8 + product9 + product10 + product11 + product12 + product13);
+let result;
+
+if(inputs1.length < 1 && inputs2.length < 1 && inputs3.length < 1 && inputs4.length < 1 && inputs5.length < 1 && inputs6.length < 1 && inputs7.length < 1 && inputs8.length < 1 && inputs9.length < 1 && inputs10.length < 1 && inputs11.length < 1 && inputs12.length < 1 && inputs13.length < 1){
+	 msg.innerText = "Input Your Grades!";
+    msg.style.color = "red";	
+}
+else if(put1.length < 1 && put2.length < 1 && put3.length < 1 && put4.length < 1 && put5.length < 1 && put6.length < 1 && put7.length < 1 && put8.length < 1 && put9.length < 1 && put10.length < 1 && put11.length < 1 && put12.length < 1 && put13.length < 1){
+	 msg.innerText = "Input Your Course Unit Loads!";
+    msg.style.color = "red";	
+}
+else if(!check15 && !check16 && !check17 && !check18 && !check19 && !check20 && !check21 && !check22 && !check23 && !check24 && !check25){
+    msg.innerText = "Select Your Total Unit Load!";
+    msg.style.color = "red";	
+}
+ else if (check15) {
+    result = (totalProducts / 15).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+    
+  } 
+else if (check16) {
+    result = (totalProducts / 16).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check17) {
+    result = (totalProducts / 17).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check18) {
+    result = (totalProducts / 18).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check19) {
+    result = (totalProducts / 19).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check20) {
+    result = (totalProducts / 20).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check21) {
+    result = (totalProducts / 21).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check22) {
+    result = (totalProducts / 22).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check23) {
+    result = (totalProducts / 23).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  } 
+  else if (check24) {
+    result = (totalProducts / 24).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+}
+else if (check25) {
+    result = (totalProducts / 25).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  }  
+   
+ 
+let products = {
+"Product 1": product1,
+"Product 2": product2,
+"Product 3": product3,
+"Product 4": product4,
+"Product 5": product5,
+"Product 6": product6,
+"Product 7": product7,
+"Product 8": product8,
+"Product 9": product9,
+"Product 10": product10,
+"Product 11": product11,
+"Product 12": product12,
+"Product 13": product13,
+"Total Products": totalProducts
+};
+console.log(products)
+console.log(input1)
+console.log(unit1)
+	      	
+   
+	}
 	      let button2 = document.querySelector("#calc")
 	      button2.addEventListener("click", handleButton2);
 	      function handleButton2(){
 	      	event.preventDefault();
       let returnMessage = document.querySelector("#message");
-      let result1 = document.querySelector("#input1").value
-      let result2 = document.querySelector("#input2").value
-      let cgpaInputPattern = /^[0-9.]{3}$/;
+      let result1 = document.querySelector("#input1").value;
+      let result2 = document.querySelector("#input2").value;
+      let cgpaInputPattern = /^[0-9.]{4}$/;
       let cummulative = 0;
 if(cgpaInputPattern.test(result1) === false){
 		returnMessage.innerText = "Enter valid GPA values!";
 		returnMessage.style.color = "red";
 }
-if(cgpaInputPattern.test(result2) === false){
+else if(cgpaInputPattern.test(result2) === false){
 		returnMessage.innerText = "Enter valid GPA values!";
 		returnMessage.style.color = "red";
 }
