@@ -23,6 +23,7 @@ html, *::before, *::after{
 	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 	line-height: 3rem;
  translate: 100%;
+ width: 100%;
 	position: relative;
 	z-index: 2;
 	margin-left: 0;
@@ -277,7 +278,7 @@ color: lightblue;
 		gap: 2vw;
 		white-space: nowrap;
 		margin-top: -3vh;
-		margin-left: 16rem;
+		margin-left: 12rem;
 		background: none;
 	opacity: 100%;
 	}
@@ -323,7 +324,7 @@ background: #063031;
 		gap: 2vw;
 		white-space: nowrap;
 		margin-top: -3vh;
-		margin-left: 26rem;
+		margin-left: 20rem;
 		background: none;
 	opacity: 100%;
 	}
@@ -338,7 +339,7 @@ background: #063031;
 		gap: 2vw;
 		white-space: nowrap;
 		margin-top: -3vh;
-		margin-left: 40rem;
+		margin-left: 30rem;
 		background: none;
 	opacity: 100%;
 	}
