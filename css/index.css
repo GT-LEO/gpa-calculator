@@ -41,6 +41,7 @@ main{
 	box-shadow: 2px 2px 2px 2px rgb(0, 0, 0.1);
 }
 header{
+	overflow-x: hidden;
 	padding-top: 1vh;
 	padding-right: 3vw;
 	display: flex;	
