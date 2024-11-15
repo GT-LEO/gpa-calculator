@@ -6,6 +6,9 @@ body{
 html, *::before, *::after{
 	box-sizing: border-box;
 }
+html{
+	overflow-x: hidden;
+}
 .heading{
 	color: #3e6465;
 	word-spacing: 0.5rem;
