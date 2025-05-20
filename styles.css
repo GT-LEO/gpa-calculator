@@ -64,7 +64,7 @@ opacity: 100%;
 cursor: pointer;
 font-size: 1.3rem;
 }
-.blog a, .contact a{
+.blog a, #com, .contact a{
 	color: #fff;
 	text-decoration: none;
 	opacity: 80%;
@@ -185,7 +185,7 @@ color: #fdfcf7;
 .picture{
 	height: 60vw;
 	width:60vw;
-	border-radius: 30vw;
+	border-radius: 10vw;
 }
 figure{
 	text-align: center;
@@ -220,6 +220,10 @@ font-weight: 600;
 	background: #063031;
 border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
+.community{
+color:lightblue;
+
+}
 .follow{
 	background: #063031;
 	margin-top: 0;
@@ -249,13 +253,14 @@ font-weight: 600;
 display: none;
 }
 .facebook{
-content: url("../images/facebook.jpg");
+content: url("../images/linkedin.jpg");
 text-decoration: none;
 height: 1.5rem;
 width: 1.5rem;
 padding: 0.1rem;
 border-radius: 0.8rem;
 	margin-left: 0.8rem;
+	background-color: #bbb;
 }
 .whatsapp{
 content: url("../images/whatsapp.png");
@@ -264,6 +269,8 @@ height: 1.5rem;
 width: 1.5rem;
 padding: 0.1rem;
 	margin-left: 0.8rem;
+	/* background-color: #bbb; */
+
 }
 .email{
 color: lavender;
@@ -292,7 +299,7 @@ color: lightblue;
 		display: flex;
 		gap: 20vw;
 	}
-	.page1, .page2, .page3, .contact a, .blog a{
+	#com, .page1, .page2, .page3, .contact a, .blog a, .comm a{
 		color: white;
 		display: inline-block;
 		background: black;
