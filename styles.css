@@ -11,6 +11,8 @@ html, *::before, *::after{
 }
 #parent{
 	overflow-x: hidden;
+	max-width: 100%;
+
 }
 .heading{
 	color: #3e6465;
@@ -183,8 +185,8 @@ color: #fdfcf7;
 	text-align: center;
 }
 .picture{
-	height: 60vw;
-	width:60vw;
+	height: 70vw;
+	width:70vw;
 	border-radius: 10vw;
 }
 figure{
