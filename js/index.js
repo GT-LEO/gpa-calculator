@@ -86,6 +86,11 @@ $(".page-gpa").slideDown(300);
 	      	 let check23 = document.querySelector(".thirteen").checked;
 	      	 let check24 = document.querySelector(".forteen").checked;
 	      	 let check25 = document.querySelector(".fifteen").checked;
+	      	 let check26 = document.querySelector(".sixteen").checked;
+	      	 let check27 = document.querySelector(".seventeen").checked;
+	      	 let check28 = document.querySelector(".eighteen").checked;
+	      	 let check29 = document.querySelector(".nineteen").checked;
+	      	 let check30 = document.querySelector(".twenty").checked;
 
 	      let input1 = convertGrade(document.querySelector(".input1").value);
 	      let input2 = convertGrade(document.querySelector(".input2").value);
@@ -100,6 +105,7 @@ $(".page-gpa").slideDown(300);
 	      let input11 = convertGrade(document.querySelector(".input11").value);
 	      let input12 = convertGrade(document.querySelector(".input12").value);
 	      let input13 = convertGrade(document.querySelector(".input13").value);
+	      let input14 = convertGrade(document.querySelector(".input14").value);
 
 
           let inputs1 = document.querySelector(".input1").value;
@@ -115,6 +121,7 @@ $(".page-gpa").slideDown(300);
 	      let inputs11 = document.querySelector(".input11").value;
 	      let inputs12 = document.querySelector(".input12").value;
 	      let inputs13 = document.querySelector(".input13").value;
+	      let inputs14 = document.querySelector(".input14").value;
 
 
 	      let unit1 = Number(document.querySelector(".unit1").value);
@@ -130,6 +137,7 @@ $(".page-gpa").slideDown(300);
 	      let unit11 = Number(document.querySelector(".unit11").value);
 	      let unit12 = Number(document.querySelector(".unit12").value);
 	      let unit13 = Number(document.querySelector(".unit13").value);
+	      let unit14 = Number(document.querySelector(".unit14").value);
 
 	      let put1 = (document.querySelector(".unit1").value);
 	      let put2 = (document.querySelector(".unit2").value);
@@ -144,6 +152,7 @@ $(".page-gpa").slideDown(300);
 	      let put11 = (document.querySelector(".unit11").value);
 	      let put12 = (document.querySelector(".unit12").value);
 	      let put13 = (document.querySelector(".unit13").value);
+	      let put14 = (document.querySelector(".unit14").value);
 
   const product1 = eval(input1 * unit1);
   const product2 = Number(input2 * unit2);
@@ -158,19 +167,20 @@ $(".page-gpa").slideDown(300);
   const product11 = Number(input11 * unit11);
   const product12 = Number(input12 * unit12);
   const product13 = Number(input13 * unit13);
+  const product14 = Number(input14 * unit14);
 
 const totalProducts = Number(product1 + product2 + product3 + product4 + product5 + product6 + product7 + product8 + product9 + product10 + product11 + product12 + product13);
 let result;
 
-if(inputs1.length < 1 && inputs2.length < 1 && inputs3.length < 1 && inputs4.length < 1 && inputs5.length < 1 && inputs6.length < 1 && inputs7.length < 1 && inputs8.length < 1 && inputs9.length < 1 && inputs10.length < 1 && inputs11.length < 1 && inputs12.length < 1 && inputs13.length < 1){
+if(inputs1.length < 1 && inputs2.length < 1 && inputs3.length < 1 && inputs4.length < 1 && inputs5.length < 1 && inputs6.length < 1 && inputs7.length < 1 && inputs8.length < 1 && inputs9.length < 1 && inputs10.length < 1 && inputs11.length < 1 && inputs12.length < 1 && inputs13.length < 1 && inputs14.length < 1){
 	 msg.innerText = "Input Your Grades!";
     msg.style.color = "red";	
 }
-else if(put1.length < 1 && put2.length < 1 && put3.length < 1 && put4.length < 1 && put5.length < 1 && put6.length < 1 && put7.length < 1 && put8.length < 1 && put9.length < 1 && put10.length < 1 && put11.length < 1 && put12.length < 1 && put13.length < 1){
+else if(put1.length < 1 && put2.length < 1 && put3.length < 1 && put4.length < 1 && put5.length < 1 && put6.length < 1 && put7.length < 1 && put8.length < 1 && put9.length < 1 && put10.length < 1 && put11.length < 1 && put12.length < 1 && put13.length < 1 && put14.length < 1){
 	 msg.innerText = "Input Your Course Unit Loads!";
     msg.style.color = "red";	
 }
-else if(!check15 && !check16 && !check17 && !check18 && !check19 && !check20 && !check21 && !check22 && !check23 && !check24 && !check25){
+else if(!check15 && !check16 && !check17 && !check18 && !check19 && !check20 && !check21 && !check22 && !check23 && !check24 && !check25 && !check26 && !check27 && !check28 && !check29 && !check30){
     msg.innerText = "Select Your Total Unit Load!";
     msg.style.color = "red";	
 }
@@ -230,7 +240,31 @@ else if (check25) {
     msg.innerText = "Your GPA is " + result;
     msg.style.color = "#063031";
   }  
-   
+  else if (check26) {
+    result = (totalProducts / 26).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  }  
+  else if (check27) {
+    result = (totalProducts / 27).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  }  
+  else if (check28) {
+    result = (totalProducts / 28).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  }  
+  else if (check29) {
+    result = (totalProducts / 29).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  }  
+  else if (check30) {
+    result = (totalProducts / 30).toFixed(2);
+    msg.innerText = "Your GPA is " + result;
+    msg.style.color = "#063031";
+  }  
  
 let products = {
 "Product 1": product1,
@@ -246,13 +280,13 @@ let products = {
 "Product 11": product11,
 "Product 12": product12,
 "Product 13": product13,
+"Product 14": product14,
 "Total Products": totalProducts
 };
 console.log(products)
 console.log(input1)
 console.log(unit1)
 	      	
-   
 	}
 	      let button2 = document.querySelector("#calc")
 	      button2.addEventListener("click", handleButton2);
