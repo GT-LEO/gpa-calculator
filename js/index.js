@@ -169,7 +169,7 @@ $(".page-gpa").slideDown(300);
   const product13 = Number(input13 * unit13);
   const product14 = Number(input14 * unit14);
 
-const totalProducts = Number(product1 + product2 + product3 + product4 + product5 + product6 + product7 + product8 + product9 + product10 + product11 + product12 + product13);
+const totalProducts = Number(product1 + product2 + product3 + product4 + product5 + product6 + product7 + product8 + product9 + product10 + product11 + product12 + product13 + product14);
 let result;
 
 if(inputs1.length < 1 && inputs2.length < 1 && inputs3.length < 1 && inputs4.length < 1 && inputs5.length < 1 && inputs6.length < 1 && inputs7.length < 1 && inputs8.length < 1 && inputs9.length < 1 && inputs10.length < 1 && inputs11.length < 1 && inputs12.length < 1 && inputs13.length < 1 && inputs14.length < 1){
